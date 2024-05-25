@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="apicall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 Degree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQ4-04-aDN">
+                                <rect key="frame" x="140.66666666666666" y="412.33333333333331" width="111.66666666666666" height="27.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mr2-6d-tx1">
+                                <rect key="frame" x="24" y="783" width="345" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Load Data"/>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYO-35-Xg1">
+                                <rect key="frame" x="140" y="376.33333333333331" width="113.33333333333331" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaF-Gn-ZVQ">
+                                <rect key="frame" x="114.66666666666669" y="452" width="164" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="F6O-Si-EDq" userLabel="indicatorWeatherData">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74r-8o-jfV">
+                                <rect key="frame" x="36.666666666666657" y="559" width="320" height="216"/>
+                            </pickerView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="7QH-jO-dlz" userLabel="indicatorWeatherCondition">
+                                <rect key="frame" x="186.66666666666666" y="488" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vvj-dx-X4x" userLabel="imageWeatherCondition">
+                                <rect key="frame" x="184" y="508" width="24" height="24"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XQ4-04-aDN" firstAttribute="top" secondItem="OYO-35-Xg1" secondAttribute="bottom" constant="12" id="2bv-e2-Iey"/>
+                            <constraint firstItem="Vvj-dx-X4x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6LW-TE-Ykm"/>
+                            <constraint firstItem="F6O-Si-EDq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gam-Jo-nlP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mr2-6d-tx1" secondAttribute="trailing" constant="24" id="HJc-nb-LK7"/>
+                            <constraint firstItem="7QH-jO-dlz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NfW-QY-jrO"/>
+                            <constraint firstItem="xaF-Gn-ZVQ" firstAttribute="top" secondItem="XQ4-04-aDN" secondAttribute="bottom" constant="12" id="Nuh-GK-Eai"/>
+                            <constraint firstItem="F6O-Si-EDq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OD9-Ky-KnR"/>
+                            <constraint firstItem="mr2-6d-tx1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Oea-Mo-RLG"/>
+                            <constraint firstItem="mr2-6d-tx1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QTD-nv-fBs"/>
+                            <constraint firstItem="mr2-6d-tx1" firstAttribute="top" secondItem="74r-8o-jfV" secondAttribute="bottom" constant="8" id="Znc-tl-utO"/>
+                            <constraint firstItem="XQ4-04-aDN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dg2-Gc-N7t"/>
+                            <constraint firstItem="7QH-jO-dlz" firstAttribute="top" secondItem="xaF-Gn-ZVQ" secondAttribute="bottom" constant="12" id="fEm-gX-Bl7"/>
+                            <constraint firstItem="XQ4-04-aDN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kME-6D-p4K"/>
+                            <constraint firstItem="xaF-Gn-ZVQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m2w-1z-CeN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mr2-6d-tx1" secondAttribute="bottom" id="qZV-h4-5x2"/>
+                            <constraint firstItem="74r-8o-jfV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="txj-Hx-NRR"/>
+                            <constraint firstItem="OYO-35-Xg1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yBp-I1-hx5"/>
+                            <constraint firstItem="Vvj-dx-X4x" firstAttribute="top" secondItem="xaF-Gn-ZVQ" secondAttribute="bottom" constant="12" id="yvr-yJ-dFI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonLoadData" destination="mr2-6d-tx1" id="0cv-Ot-lwt"/>
+                        <outlet property="imageWeatherCondition" destination="Vvj-dx-X4x" id="hoA-Zq-rwQ"/>
+                        <outlet property="indicatorWeatherConditionIcon" destination="7QH-jO-dlz" id="nBB-aD-Vcz"/>
+                        <outlet property="indicatorWeatherData" destination="F6O-Si-EDq" id="XbC-el-Nt3"/>
+                        <outlet property="labelLocation" destination="OYO-35-Xg1" id="Im5-S7-7U3"/>
+                        <outlet property="labelWeatherCondition" destination="xaF-Gn-ZVQ" id="W8I-KO-PRc"/>
+                        <outlet property="labelWeatherTemperature" destination="XQ4-04-aDN" id="Iit-hq-BhV"/>
+                        <outlet property="pickerCountry" destination="74r-8o-jfV" id="UbK-eB-Viy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45.038167938931295" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
